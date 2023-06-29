@@ -2,7 +2,7 @@
 Console.WriteLine("Введите количество элементов массива"); 
 int size = Convert.ToInt32(Console.ReadLine()); 
 int[] result = new int[size];
-void mas(int a) 
+void mas(int size) 
 { 
     for (int i = 0; i < size; i++) 
     { result[i] = new Random().Next(99,999); 
@@ -13,6 +13,8 @@ int kol(int[] randomArray)
 for (int i = 0;
  i < randomArray.Length; i++) 
  { if (randomArray[i] % 2 == 0) 
- kol = kol + 1; } return kol; }
+ kol = kol + 1; } 
+ return kol;
+}
 mas(size); 
 Console.Write($"Количество чётных чисел в массиве: {kol(result)}");
